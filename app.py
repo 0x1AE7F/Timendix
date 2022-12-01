@@ -64,10 +64,8 @@ def test():
 
 @app.route("/login")
 def login():
-    if db.user_exists():
-        return render_template("auth.html", title="Please log in to continue", btn_text="LOGIN")
-    else:
-        return render_template("auth.html", title="Please register to continue", btn_text="REGISTER")
+    if db.user_exists(): return render_template("auth.html", title="Please log in to continue", btn_text="LOGIN")
+    return render_template("auth.html", title="Please register to continue", btn_text="REGISTER")
 @app.route("/login", methods=["POST"])
 def api_login():
     global email
@@ -86,7 +84,7 @@ def api_login():
             return redirect("login")
 @app.route("/logout")
 def logout():
-    session['username'] = None
+    session.clear()
     return redirect("/login")
     
     
