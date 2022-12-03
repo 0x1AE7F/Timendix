@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <title>scheduleTS Login</title>
+  {% set translations = init_translator() %}
 </head>
 
 <body class="bg-secondary h-100 d-flex align-items-center justify-content-center">
@@ -16,28 +17,46 @@
       <div class="modal-content rounded-4 shadow">
         <img src="{{url_for('static', filename='images/logo.png')}}" class="mx-auto mt-2 img-fluid"
           style="max-width: 100px">
-        <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h1 class="fw-bold mb-0 fs-2">{{ title }}</h1>
+        <div class="modal-header ps-5 pe-5 pb-2">
+          {% if registration %}
+          <h1 class="fw-bold fs-5">{{ translations['auth']['title_register'] }}</h1>
+          {% else %}
+          <h1 class="fw-bold fs-5">{{ translations['auth']['title_login'] }}</h1>
+          {% endif %}
         </div>
-        <p class="p-5 pb-4 border-bottom-0 fs-6 mb-0 fs-2 text-danger">{{ error_msg }}</p>
 
+        
+          {% if short_password %}
+          <p class="ps-5 pe-5 fs-6 pt-2 text-danger">
+          {{ translations['auth']['error_msg_short_password'] }}
+          </p>
+          {% elif wrong_password %}
+          <p class="ps-5 pe-5 fs-6 pt-2 text-danger">
+          {{ translations['auth']['error_msg_wrong_credentials'] }}
+          </p>
+          {% endif %}
 
-        <div class="modal-body p-5 pt-0">
+        <div class="modal-body p-5 pt-4">
           <form action="/login" method="POST">
             <div class="form-floating mb-3">
               <input type="email" class="form-control rounded-3" autofocus name="email" placeholder="E-Mail">
-              <label for="email">Email address</label>
+              <label for="email">{{ translations['auth']['input_email'] }}</label>
             </div>
             <div class="form-floating mb-3">
               <input type="password" class="form-control rounded-3" tabindex="0" name="password" placeholder="Password">
-              <label for="password">Password</label>
+              <label for="password">{{ translations['auth']['input_password'] }}</label>
             </div>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">{{ btn_text }}</button>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">
+              {% if registration %}
+              {{ translations['auth']['btn_register'] }}
+              {% else %}
+              {{ translations['auth']['btn_login'] }}
+              {% endif %}
+            </button>
           </form>
         </div>
       </div>
     </div>
   </div>
 </body>
-
 </html>

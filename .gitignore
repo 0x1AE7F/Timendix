@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Just my goofy
+todo.txt
+
+# Databases
+databases/
