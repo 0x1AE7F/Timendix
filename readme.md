@@ -3,6 +3,6 @@ Manage your Timetables & Schedules
 
 
 ## Todo
-- [ ] Translations (Planned DE for now)
+- [X] Translations ( Volunteers needed for Translating into different languages )
 - [ ] Student Logins
-- [ ] Class Timetables (with login)
+- [ ] Class Timetables ( with login )
