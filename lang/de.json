@@ -1,12 +1,20 @@
 {
     "auth": {
-        "btn_register": "REGISTRIEREN",
-        "btn_login": "ANMELDEN",
-        "error_msg_wrong_credentials": "Falsche Anmeldedaten!",
-        "error_msg_short_password": "Das Passwort muss mindestens 8 Zeichen lang sein!",
         "title_login": "Bitte melden sie sich an um fortzufahren",
         "title_register": "Bitte registrieren sie sich um fortzufahren",
+        "error_msg_wrong_credentials": "Falsche Anmeldedaten!",
+        "error_msg_short_password": "Das Passwort muss mindestens 8 Zeichen lang sein!",
         "input_email": "E-Mail Adresse",
-        "input_password": "Passwort"
+        "input_password": "Passwort",
+        "btn_register": "REGISTRIEREN",
+        "btn_login": "ANMELDEN"
+    },
+    "sidebar": {
+        "btn_dashboard": "Übersicht",
+        "btn_teachers": "Lehrer:innen",
+        "btn_classes": "Klassen",
+        "btn_logs": "Log",
+        "btn_settings": "Einstellungen",
+        "btn_logout": "Abmelden"
     }
 }

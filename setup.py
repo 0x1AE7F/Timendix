@@ -5,11 +5,6 @@ import sys
 import binascii
 from colorama import Fore
 
-
-
-
-
-
 def setup() -> None:
     supported_langs = ["DE"]
     config = configparser.ConfigParser()

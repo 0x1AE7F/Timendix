@@ -28,7 +28,7 @@ def show_schedule():
 @app.route("/dashboard")
 def dashboard():
     if 'username' in session:
-        return render_template("dashboard.html", email=email, dashboard_selected=True)
+        return render_template("dashboard.html", dashboard_selected=True)
     else:
         return redirect("/login")
 
@@ -36,7 +36,7 @@ def dashboard():
 @app.route("/dashboard/teachers")
 def dashboard_teachers():
     if 'username' in session:
-        return render_template("teachers.html", email=email, teachers_selected=True)
+        return render_template("teachers.html", teachers_selected=True)
     else:
         return redirect("/login")
 
@@ -44,7 +44,7 @@ def dashboard_teachers():
 @app.route("/dashboard/classes")
 def dashboard_classes():
     if 'username' in session:
-        return render_template("classes.html", email=email, classes_selected=True)
+        return render_template("classes.html", classes_selected=True)
     else:
         return redirect("/login")
 
@@ -52,7 +52,7 @@ def dashboard_classes():
 @app.route("/dashboard/logs")
 def dashboard_logs():
     if 'username' in session:
-        return render_template("logs.html", email=email, logs_selected=True)
+        return render_template("logs.html", logs_selected=True)
     else:
         return redirect("/login")
 
@@ -60,14 +60,14 @@ def dashboard_logs():
 @app.route("/dashboard/settings")
 def dashboard_settings():
     if 'username' in session:
-        return render_template("settings.html", email=email, settings_selected=True)
+        return render_template("settings.html", settings_selected=True)
     else:
         return redirect("/login")
 
 
 @app.route("/test")
 def test():
-    return render_template("dashboard.html", email=email, dashboard_selected=True)
+    return render_template("dashboard.html", dashboard_selected=True)
 
 
 @app.route("/login")

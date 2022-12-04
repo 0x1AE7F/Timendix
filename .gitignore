@@ -134,3 +134,6 @@ todo.txt
 
 # Databases
 databases/
+
+# App config
+app_config.ini
