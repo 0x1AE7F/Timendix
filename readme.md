@@ -24,7 +24,7 @@ Manage your Timetables & Schedules
             "input_password": "Password",
             "btn_register": "REGISTER",
             "btn_login": "LOGIN"
-        },
+             },
         "sidebar": {
             "btn_dashboard": "Dashboard",
             "btn_teachers": "Teachers",
@@ -32,5 +32,5 @@ Manage your Timetables & Schedules
             "btn_logs": "Logs",
             "btn_settings": "Settings",
             "btn_logout": "Logout"
-        }
-    }
+             }
+         }
