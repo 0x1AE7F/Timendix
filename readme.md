@@ -3,9 +3,10 @@ Manage your Timetables & Schedules
 
 
 ## Todo
-- [X] Translations ( Volunteers needed for Translating into different languages )
-- [ ] Student Logins
-- [ ] Class Timetables ( with login )
+- [X] Translations ( Volunteers needed for tanslating into different languages )
+- [ ] Student logins
+- [ ] Class timetables ( with login )
+- [ ] Balanced student group creator
 
 
 ## Adding new Translations:
