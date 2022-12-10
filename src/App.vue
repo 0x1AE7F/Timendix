@@ -1,11 +1,13 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <SideBar />
+      <ContentTest />
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-  import HelloWorld from '@/components/HelloWorld.vue'
+import SideBar from '@/components/SideBar.vue';
+import ContentTest from '@/components/ContentTest.vue';
 </script>
